@@ -19,7 +19,7 @@ foreach ($FORM_PARAMS as $param) {
 
 
 // check if description field has at least 3 characters
-if (strlen($_POST['description']) < 3) {
+if (strlen(trim($_POST['description'])) < 3) {
     $errors['description'] = "Le champ <b> DESCRIPTION </b> doit contenir au moins 3 caractères";
 }
    
@@ -53,10 +53,10 @@ if (!count($errors)) {
     }
 
 }else{
-    $title = htmlspecialchars($_POST['titre'] ) ;
-    $artiste = htmlspecialchars($_POST['artiste'] ) ;
-    $image = htmlspecialchars($_POST['image'] ) ;
-    $description = nl2br(htmlspecialchars($_POST['description']));
+    $title = trim(htmlspecialchars($_POST['titre']));
+    $artiste = trim(htmlspecialchars($_POST['artiste']));
+    $image = trim(htmlspecialchars($_POST['image']));
+    $description = trim(htmlspecialchars($_POST['description']));
     require("ajouter.php");
 }
 
