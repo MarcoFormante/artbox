@@ -53,9 +53,9 @@ if (!count($errors)) {
     }
 
 }else{
-    $title = htmlspecialchars($_POST['titre']);
-    $artiste = htmlspecialchars($_POST['artiste']);
-    $image = htmlspecialchars($_POST['image']);
+    $title = htmlspecialchars($_POST['titre'] ) ;
+    $artiste = htmlspecialchars($_POST['artiste'] ) ;
+    $image = htmlspecialchars($_POST['image'] ) ;
     $description = nl2br(htmlspecialchars($_POST['description']));
     require("ajouter.php");
 }
