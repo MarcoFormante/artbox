@@ -11,7 +11,7 @@
 
     // On recuper l'oeuvre depuis le database
     $pdoConnection = connection();
-    $stmt = $pdoConnection->prepare("SELECT * FROM oeuvres WHERE id = :id");
+    $stmt = $pdoConnection->prepare("SELECT titre, artiste, image, description FROM oeuvres WHERE id = :id");
     $stmt->execute(['id' => $_GET['id']]);
   
     $oeuvre = $stmt->fetch(PDO::FETCH_ASSOC);

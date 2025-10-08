@@ -3,7 +3,7 @@
     require 'functions.php';
 
     $pdoConnection = connection();
-    $stmt = $pdoConnection->prepare("SELECT * FROM oeuvres");
+    $stmt = $pdoConnection->prepare("SELECT id, titre, artiste, image FROM oeuvres");
     $stmt->execute();
 
     $oeuvres = $stmt->fetchAll();
