@@ -174,3 +174,7 @@ input[type="submit"] {
     font-size: 1.1rem;
 }
 
+.input-error{
+    border: 2px solid red;
+}
+
